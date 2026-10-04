@@ -1,504 +1,958 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>فلش بیرجند | معرفی شهر بیرجند</title>
+<title>فلش بیرجند | فروشگاه فلش و لوازم جانبی</title>
 
-    <meta name="description" content="معرفی شهر زیبای بیرجند، جاذبه‌های گردشگری، فرهنگ، تاریخ و دیدنی‌های بیرجند">
+<meta name="description"
+content="فروشگاه آنلاین فلش بیرجند">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        html {
-            scroll-behavior: smooth;
-        }
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.9;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        /* نوار بالا */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(20, 30, 40, 0.96);
-            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-        }
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.8;
+}
 
-        nav {
-            max-width: 1100px;
-            margin: auto;
-            padding: 14px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* HEADER */
 
-        .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#17212b;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
 
-        .logo span {
-            color: #ffd166;
-        }
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+.logo span{
+    color:#ffd166;
+}
 
-        nav a:hover {
-            color: #ffd166;
-        }
+nav{
+    display:flex;
+    gap:20px;
+}
 
-        /* بخش اصلی */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 40px 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
 
-            background:
-                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+nav a:hover{
+    color:#ffd166;
+}
 
-            background-size: cover;
-            background-position: center;
-        }
+.cart-button{
+    border:0;
+    background:#ffd166;
+    color:#222;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+/* HERO */
 
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1800&q=80");
 
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 30px;
-        }
+    background-size:cover;
+    background-position:center;
 
-        .button {
-            display: inline-block;
-            background: #ffd166;
-            color: #222;
-            padding: 12px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    min-height:430px;
 
-        .button:hover {
-            transform: translateY(-3px);
-            background: white;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-        /* بخش‌ها */
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 75px 20px;
-        }
+    text-align:center;
+    color:white;
 
-        .title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+    padding:40px 20px;
+}
 
-        .title h2 {
-            font-size: 34px;
-            color: #243447;
-            margin-bottom: 10px;
-        }
+.hero-content{
+    max-width:750px;
+}
 
-        .title p {
-            color: #666;
-        }
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
 
-        /* معرفی */
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
-            align-items: center;
-        }
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
 
-        .about-text {
-            font-size: 18px;
-        }
+.hero-button{
+    display:inline-block;
+    background:#ffd166;
+    color:#222;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .about-box {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
+/* GENERAL */
 
-        /* کارت‌ها */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:65px 20px;
+}
 
-        .card {
-            background: white;
-            border-radius: 18px;
-            padding: 30px 22px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
+.section-title h2{
+    font-size:34px;
+    color:#17212b;
+}
 
-        .card .icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+.section-title p{
+    color:#777;
+}
 
-        .card h3 {
-            margin-bottom: 12px;
-            color: #243447;
-        }
+/* SEARCH */
 
-        /* آمار */
-        .stats {
-            background: #243447;
-            color: white;
-            max-width: none;
-        }
+.search-box{
+    max-width:600px;
+    margin:0 auto 35px;
+}
 
-        .stats-container {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
-            gap: 20px;
-        }
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+    border:1px solid #ddd;
+    border-radius:30px;
+    font-size:16px;
+    outline:none;
+}
 
-        .stat strong {
-            display: block;
-            font-size: 38px;
-            color: #ffd166;
-        }
+/* PRODUCTS */
 
-        /* جاذبه‌ها */
-        .places {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
 
-        .place {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
-        }
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-        .place h3 {
-            color: #243447;
-            margin-bottom: 10px;
-        }
+.product:hover{
+    transform:translateY(-6px);
+}
 
-        /* تماس */
-        .contact {
-            background: white;
-            text-align: center;
-            border-radius: 25px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
+.product-image{
+    height:190px;
+    background:#e9edf2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+}
 
-        /* فوتر */
-        footer {
-            background: #17212b;
-            color: white;
-            text-align: center;
-            padding: 30px 15px;
-        }
+.product-info{
+    padding:22px;
+}
 
-        footer span {
-            color: #ffd166;
-        }
+.product-info h3{
+    margin-bottom:8px;
+}
 
-        /* موبایل */
-        @media (max-width: 800px) {
+.product-info p{
+    color:#777;
+    font-size:14px;
+    min-height:55px;
+}
 
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
+.price{
+    color:#d88a00;
+    font-size:20px;
+    font-weight:bold;
+    margin:15px 0;
+}
 
-            nav ul {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+.add-cart{
+    width:100%;
+    border:0;
+    background:#17212b;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+.add-cart:hover{
+    background:#263849;
+}
 
-            .hero p {
-                font-size: 18px;
-            }
+/* FEATURES */
 
-            .about,
-            .cards,
-            .places,
-            .stats-container {
-                grid-template-columns: 1fr;
-            }
+.features{
+    background:white;
+}
 
-            section {
-                padding: 55px 15px;
-            }
-        }
-    </style>
+.feature-grid{
+    max-width:1150px;
+    margin:auto;
+    padding:55px 20px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    text-align:center;
+    padding:25px;
+}
+
+.feature-icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+/* CART */
+
+.cart-panel{
+    position:fixed;
+    top:0;
+    left:-420px;
+
+    width:390px;
+    max-width:90%;
+
+    height:100vh;
+
+    background:white;
+
+    z-index:2000;
+
+    box-shadow:5px 0 25px rgba(0,0,0,.25);
+
+    transition:.35s;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.cart-panel.active{
+    left:0;
+}
+
+.cart-header{
+    background:#17212b;
+    color:white;
+
+    padding:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.close-cart{
+    background:none;
+    border:0;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.cart-items{
+    flex:1;
+    overflow:auto;
+    padding:20px;
+}
+
+.cart-item{
+    border-bottom:1px solid #eee;
+    padding:15px 0;
+}
+
+.cart-item-title{
+    font-weight:bold;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.quantity button{
+    border:0;
+    width:30px;
+    height:30px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.remove{
+    color:#d33;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.cart-footer{
+    padding:20px;
+    border-top:1px solid #ddd;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.checkout-button{
+    width:100%;
+    border:0;
+    background:#28a745;
+    color:white;
+    padding:13px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* OVERLAY */
+
+.overlay{
+    display:none;
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    z-index:1500;
+}
+
+.overlay.active{
+    display:block;
+}
+
+/* ORDER */
+
+.order-section{
+    background:#f0f3f7;
+}
+
+.order-box{
+    max-width:650px;
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:13px;
+
+    border:1px solid #ddd;
+
+    border-radius:9px;
+
+    font-family:inherit;
+
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.submit-order{
+    width:100%;
+
+    background:#17212b;
+    color:white;
+
+    border:0;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+/* SUCCESS */
+
+.success{
+    display:none;
+
+    background:#dff5e4;
+    color:#17652a;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-top:15px;
+
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:#17212b;
+    color:white;
+
+    text-align:center;
+
+    padding:30px 15px;
+}
+
+footer span{
+    color:#ffd166;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav{
+        order:3;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero{
+        min-height:390px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        padding:45px 15px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <div class="logo">فلش <span>بیرجند</span></div>
+<!-- HEADER -->
 
-        <ul>
-            <li><a href="#home">خانه</a></li>
-            <li><a href="#about">درباره بیرجند</a></li>
-            <li><a href="#places">دیدنی‌ها</a></li>
-            <li><a href="#contact">ارتباط</a></li>
-        </ul>
-    </nav>
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+فلش <span>بیرجند</span>
+</div>
+
+<nav>
+<a href="#home">خانه</a>
+<a href="#products">محصولات</a>
+<a href="#features">مزایا</a>
+<a href="#order">ثبت سفارش</a>
+</nav>
+
+<button class="cart-button" onclick="openCart()">
+🛒 سبد خرید
+<span id="cartCount">0</span>
+</button>
+
+</div>
+
 </header>
 
-<!-- صفحه اصلی -->
+
+<!-- HERO -->
+
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>بیرجند، شهر فرهنگ و تاریخ</h1>
 
-        <p>
-            به وب‌سایت فلش بیرجند خوش آمدید؛
-            جایی برای آشنایی با زیبایی‌ها، تاریخ و جاذبه‌های شهر بیرجند.
-        </p>
+<div class="hero-content">
 
-        <a href="#about" class="button">
-            بیشتر بدانید
-        </a>
-    </div>
-</section>
+<h1>
+فروشگاه فلش بیرجند
+</h1>
 
-<!-- معرفی -->
-<section id="about">
+<p>
+خرید آسان فلش و لوازم ذخیره‌سازی
+با امکان ثبت سفارش آنلاین
+</p>
 
-    <div class="title">
-        <h2>درباره بیرجند</h2>
-        <p>نگاهی کوتاه به شهر زیبای بیرجند</p>
-    </div>
+<a href="#products" class="hero-button">
+مشاهده محصولات
+</a>
 
-    <div class="about">
-
-        <div class="about-text">
-            <div class="about-box">
-                <p>
-                    بیرجند یکی از شهرهای تاریخی و زیبای شرق ایران و
-                    مرکز استان خراسان جنوبی است.
-                </p>
-
-                <br>
-
-                <p>
-                    این شهر با معماری سنتی، باغ‌های تاریخی،
-                    فرهنگ غنی و مردم مهمان‌نواز خود شناخته می‌شود.
-                </p>
-
-                <br>
-
-                <p>
-                    هدف این سایت معرفی بهتر بیرجند و آشنایی بیشتر
-                    مردم با تاریخ، فرهنگ و جاذبه‌های این شهر است.
-                </p>
-            </div>
-        </div>
-
-        <div class="about-box">
-            <h3>🌄 بیرجند</h3>
-            <p>
-                شهری با طبیعت زیبا، بناهای تاریخی و فرهنگ
-                ارزشمند خراسان جنوبی.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<!-- ویژگی‌ها -->
-<section>
-
-    <div class="title">
-        <h2>چرا بیرجند؟</h2>
-        <p>چند ویژگی مهم این شهر</p>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">🏛️</div>
-            <h3>تاریخ و فرهنگ</h3>
-            <p>
-                بیرجند دارای آثار تاریخی و فرهنگی ارزشمند است.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🌿</div>
-            <h3>طبیعت</h3>
-            <p>
-                اطراف بیرجند دارای مناظر طبیعی و باغ‌های زیبایی است.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">❤️</div>
-            <h3>مردم مهمان‌نواز</h3>
-            <p>
-                فرهنگ مردم بیرجند بخشی مهم از هویت این شهر است.
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- آمار -->
-<section class="stats">
 
-    <div class="stats-container">
+<!-- PRODUCTS -->
 
-        <div class="stat">
-            <strong>🌆</strong>
-            شهر بیرجند
-        </div>
+<section class="container" id="products">
 
-        <div class="stat">
-            <strong>🏛️</strong>
-            تاریخ و فرهنگ
-        </div>
+<div class="section-title">
 
-        <div class="stat">
-            <strong>🌄</strong>
-            طبیعت زیبا
-        </div>
+<h2>
+محصولات فروشگاه
+</h2>
 
-    </div>
+<p>
+محصول مورد نظر خود را انتخاب کنید
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔎 جستجوی محصول..."
+oninput="searchProducts()"
+>
+
+</div>
+
+
+<div class="products" id="productsList">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product" data-name="فلش 32 گیگ">
+
+<div class="product-image">
+💾
+</div>
+
+<div class="product-info">
+
+<h3>
+فلش 32 گیگ
+</h3>
+
+<p>
+فلش USB با ظرفیت 32 گیگابایت مناسب استفاده روزمره.
+</p>
+
+<div class="price">
+۱۵۰٬۰۰۰ تومان
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('فلش 32 گیگ',150000)"
+>
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product" data-name="فلش 64 گیگ">
+
+<div class="product-image">
+💾
+</div>
+
+<div class="product-info">
+
+<h3>
+فلش 64 گیگ
+</h3>
+
+<p>
+ظرفیت مناسب برای فیلم، عکس، فایل و اطلاعات شخصی.
+</p>
+
+<div class="price">
+۲۵۰٬۰۰۰ تومان
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('فلش 64 گیگ',250000)"
+>
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product" data-name="فلش 128 گیگ">
+
+<div class="product-image">
+💾
+</div>
+
+<div class="product-info">
+
+<h3>
+فلش 128 گیگ
+</h3>
+
+<p>
+فضای ذخیره‌سازی بیشتر برای فایل‌های حجیم.
+</p>
+
+<div class="price">
+۴۲۰٬۰۰۰ تومان
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('فلش 128 گیگ',420000)"
+>
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product" data-name="فلش OTG">
+
+<div class="product-image">
+📱
+</div>
+
+<div class="product-info">
+
+<h3>
+فلش OTG
+</h3>
+
+<p>
+مناسب انتقال فایل بین موبایل و کامپیوتر.
+</p>
+
+<div class="price">
+۲۸۰٬۰۰۰ تومان
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('فلش OTG',280000)"
+>
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product" data-name="کارت حافظه">
+
+<div class="product-image">
+💳
+</div>
+
+<div class="product-info">
+
+<h3>
+کارت حافظه
+</h3>
+
+<p>
+مناسب موبایل، دوربین و دستگاه‌های دیجیتال.
+</p>
+
+<div class="price">
+۳۰۰٬۰۰۰ تومان
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('کارت حافظه',300000)"
+>
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 6 -->
+
+<div class="product" data-name="رم ریدر">
+
+<div class="product-image">
+🔌
+</div>
+
+<div class="product-info">
+
+<h3>
+رم ریدر
+</h3>
+
+<p>
+ابزار کاربردی برای خواندن کارت‌های حافظه.
+</p>
+
+<div class="price">
+۱۲۰٬۰۰۰ تومان
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('رم ریدر',120000)"
+>
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
-<!-- دیدنی‌ها -->
-<section id="places">
 
-    <div class="title">
-        <h2>جاذبه‌های بیرجند</h2>
-        <p>چند مورد از مکان‌های شناخته‌شده شهر</p>
-    </div>
+<!-- FEATURES -->
 
-    <div class="places">
+<section class="features" id="features">
 
-        <div class="place">
-            <h3>🏰 باغ و عمارت اکبریه</h3>
-            <p>
-                باغ و عمارت اکبریه از بناهای تاریخی شناخته‌شده
-                بیرجند و یکی از نمادهای فرهنگی این شهر است.
-            </p>
-        </div>
+<div class="feature-grid">
 
-        <div class="place">
-            <h3>🏛️ ارگ کلاه‌فرنگی</h3>
-            <p>
-                ارگ کلاه‌فرنگی یکی از بناهای تاریخی مهم بیرجند
-                با معماری متفاوت و جذاب است.
-            </p>
-        </div>
+<div class="feature">
 
-        <div class="place">
-            <h3>🌳 باغ‌های بیرجند</h3>
-            <p>
-                باغ‌های تاریخی بیرجند بخش مهمی از هویت معماری
-                و طبیعی منطقه را تشکیل می‌دهند.
-            </p>
-        </div>
+<div class="feature-icon">
+🚚
+</div>
 
-        <div class="place">
-            <h3>🕌 بناهای تاریخی</h3>
-            <p>
-                در بیرجند بناهای تاریخی مختلفی وجود دارد که
-                نشان‌دهنده پیشینه فرهنگی این منطقه هستند.
-            </p>
-        </div>
+<h3>
+تحویل سفارش
+</h3>
 
-    </div>
+<p>
+پس از تأیید سفارش، هماهنگی تحویل انجام می‌شود.
+</p>
 
-</section>
+</div>
 
-<!-- تماس -->
-<section id="contact">
 
-    <div class="contact">
+<div class="feature">
 
-        <div class="title">
-            <h2>ارتباط با ما</h2>
+<div class="feature-icon">
+🛒
+</div>
 
-            <p>
-                این سایت برای معرفی شهر زیبای بیرجند ساخته شده است.
-            </p>
+<h3>
+خرید آسان
+</h3>
 
-            <br>
+<p>
+محصول را انتخاب کنید و سفارش خود را ثبت کنید.
+</p>
 
-            <a class="button" href="#home">
-                بازگشت به بالا
-            </a>
-        </div>
+</div>
 
-    </div>
+
+<div class="feature">
+
+<div class="feature-icon">
+🔒
+</div>
+
+<h3>
+ثبت سفارش امن
+</h3>
+
+<p>
+اطلاعات سفارش فقط برای پیگیری خرید استفاده می‌شود.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<footer>
 
-    <p>
-        © 2026 <span>فلش بیرجند</span> | ساخته شده برای معرفی بیرجند
-    </p>
+<!-- ORDER -->
 
-</footer>
+<section class="container order-section" id="order">
 
-</body>
-</html>
+<div class="section-title">
+
+<h2>
+ثبت سفارش
+</h2>
+
+<p>
+اطلاعات خود را وارد کنید تا سفارش ثبت شود.
+</p>
+
+</div>
+
+
+<div class="order-box">
+
+<form id="orderForm">
+
+<div class="form-group">
+
+<label>
+نام و نام خانوادگی
+</label>
+
+<input
+type="text"
+id="customerName"
+required
+placeholder="مثلاً امیرحسین احمدی"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+شماره تماس
+</label>
+
+<input
+type="tel"
+id="customerPhone"
+required
+placeholder="09xxxxxxxxx"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+روش پرداخت
+</label>
+
+<select id="payment">
+
+<option>
+کارت به کارت
+</option>
+
+<option>
+پرداخت هنگام تحویل
+</option
+```
