@@ -1,134 +1,504 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>فلش‌مارکت بیرجند</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5f7fb;color:#172033;line-height:1.8}
-header{background:#111827;color:#fff;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:9;box-shadow:0 3px 15px #0002}
-.logo{font-size:21px;font-weight:bold}.logo b{color:#38bdf8}nav a{color:#fff;text-decoration:none;margin:0 7px;font-size:14px}
-.hero{padding:75px 6%;text-align:center;color:#fff;background:linear-gradient(135deg,#0f172a,#1d4ed8)}
-.hero h1{font-size:40px;margin:0 0 12px}.hero h1 span{color:#67e8f9}.hero p{font-size:17px}
-.btn{display:inline-block;border:0;border-radius:9px;padding:11px 19px;background:#2563eb;color:#fff;text-decoration:none;cursor:pointer;font-weight:bold;margin:5px}.primary{background:#38bdf8;color:#082f49}
-.section{max-width:1150px;margin:auto;padding:50px 5%}.title{text-align:center;margin-bottom:30px}.title p{color:#64748b}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card,.box{background:#fff;border-radius:15px;padding:22px;box-shadow:0 5px 20px #0000000d}.card{text-align:center}.icon{font-size:55px}.price{font-weight:bold;color:#087f5b}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{text-align:center;background:#fff;padding:22px;border-radius:15px}
-.form{max-width:650px;margin:auto}.form label{display:block;font-weight:bold;margin:13px 0}.form input,.form select,.form textarea{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;margin-top:5px;font-size:15px}
-.notice{background:#fff7ed;padding:12px;border-radius:9px;margin:15px 0}.hidden{display:none}.success{background:#ecfdf5;border:1px solid #a7f3d0;padding:15px;border-radius:10px}
-.order{margin:12px 0}.order small{color:#64748b}footer{text-align:center;background:#111827;color:#cbd5e1;padding:25px}
-@media(max-width:850px){.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.hero h1{font-size:31px}}
-@media(max-width:550px){header{flex-direction:column;gap:8px}.products{grid-template-columns:1fr}.hero h1{font-size:27px}nav a{font-size:12px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>فلش بیرجند | معرفی شهر بیرجند</title>
+
+    <meta name="description" content="معرفی شهر زیبای بیرجند، جاذبه‌های گردشگری، فرهنگ، تاریخ و دیدنی‌های بیرجند">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.9;
+        }
+
+        /* نوار بالا */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(20, 30, 40, 0.96);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* بخش اصلی */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffd166;
+            color: #222;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+        /* بخش‌ها */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 75px 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h2 {
+            font-size: 34px;
+            color: #243447;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #666;
+        }
+
+        /* معرفی */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 18px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        /* کارت‌ها */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 22px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #243447;
+        }
+
+        /* آمار */
+        .stats {
+            background: #243447;
+            color: white;
+            max-width: none;
+        }
+
+        .stats-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 38px;
+            color: #ffd166;
+        }
+
+        /* جاذبه‌ها */
+        .places {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .place {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+        }
+
+        .place h3 {
+            color: #243447;
+            margin-bottom: 10px;
+        }
+
+        /* تماس */
+        .contact {
+            background: white;
+            text-align: center;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        /* فوتر */
+        footer {
+            background: #17212b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer span {
+            color: #ffd166;
+        }
+
+        /* موبایل */
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .about,
+            .cards,
+            .places,
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">💾 فلش‌مارکت <b>بیرجند</b></div>
-<nav>
-<a href="#home">خانه</a><a href="#products">محصولات</a><a href="#order">سفارش</a><a href="#admin">مدیریت</a>
-</nav>
+    <nav>
+        <div class="logo">فلش <span>بیرجند</span></div>
+
+        <ul>
+            <li><a href="#home">خانه</a></li>
+            <li><a href="#about">درباره بیرجند</a></li>
+            <li><a href="#places">دیدنی‌ها</a></li>
+            <li><a href="#contact">ارتباط</a></li>
+        </ul>
+    </nav>
 </header>
 
+<!-- صفحه اصلی -->
 <section class="hero" id="home">
-<h1>فروش انواع <span>فلش مموری</span> در بیرجند</h1>
-<p>ثبت سفارش آسان • کارت‌به‌کارت • پرداخت هنگام تحویل • تحویل حضوری</p>
-<a class="btn primary" href="#products">مشاهده محصولات</a>
+    <div class="hero-content">
+        <h1>بیرجند، شهر فرهنگ و تاریخ</h1>
+
+        <p>
+            به وب‌سایت فلش بیرجند خوش آمدید؛
+            جایی برای آشنایی با زیبایی‌ها، تاریخ و جاذبه‌های شهر بیرجند.
+        </p>
+
+        <a href="#about" class="button">
+            بیشتر بدانید
+        </a>
+    </div>
 </section>
 
-<section class="section" id="products">
-<div class="title"><h2>💾 محصولات</h2><p>محصول موردنظر خود را انتخاب کنید.</p></div>
-<div class="products" id="productList"></div>
+<!-- معرفی -->
+<section id="about">
+
+    <div class="title">
+        <h2>درباره بیرجند</h2>
+        <p>نگاهی کوتاه به شهر زیبای بیرجند</p>
+    </div>
+
+    <div class="about">
+
+        <div class="about-text">
+            <div class="about-box">
+                <p>
+                    بیرجند یکی از شهرهای تاریخی و زیبای شرق ایران و
+                    مرکز استان خراسان جنوبی است.
+                </p>
+
+                <br>
+
+                <p>
+                    این شهر با معماری سنتی، باغ‌های تاریخی،
+                    فرهنگ غنی و مردم مهمان‌نواز خود شناخته می‌شود.
+                </p>
+
+                <br>
+
+                <p>
+                    هدف این سایت معرفی بهتر بیرجند و آشنایی بیشتر
+                    مردم با تاریخ، فرهنگ و جاذبه‌های این شهر است.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-box">
+            <h3>🌄 بیرجند</h3>
+            <p>
+                شهری با طبیعت زیبا، بناهای تاریخی و فرهنگ
+                ارزشمند خراسان جنوبی.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section class="section">
-<div class="features">
-<div class="feature">🛒<h3>ثبت سفارش آنلاین</h3><p>فرم سفارش را پر کنید.</p></div>
-<div class="feature">💳<h3>کارت‌به‌کارت</h3><p>بدون نیاز به درگاه بانکی.</p></div>
-<div class="feature">📍<h3>تحویل حضوری</h3><p>آدرس بعد از تأیید سفارش اعلام می‌شود.</p></div>
-</div>
+<!-- ویژگی‌ها -->
+<section>
+
+    <div class="title">
+        <h2>چرا بیرجند؟</h2>
+        <p>چند ویژگی مهم این شهر</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🏛️</div>
+            <h3>تاریخ و فرهنگ</h3>
+            <p>
+                بیرجند دارای آثار تاریخی و فرهنگی ارزشمند است.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌿</div>
+            <h3>طبیعت</h3>
+            <p>
+                اطراف بیرجند دارای مناظر طبیعی و باغ‌های زیبایی است.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">❤️</div>
+            <h3>مردم مهمان‌نواز</h3>
+            <p>
+                فرهنگ مردم بیرجند بخشی مهم از هویت این شهر است.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="order">
-<div class="box form">
-<div class="title"><h2>🛒 ثبت سفارش</h2><p>اطلاعات سفارش خود را وارد کنید.</p></div>
-<form id="orderForm">
-<label>نام و نام خانوادگی<input id="name" required></label>
-<label>شماره موبایل<input id="phone" inputmode="tel" placeholder="09xxxxxxxxx" required></label>
-<label>محصول<select id="product" required><option value="">انتخاب کنید</option></select></label>
-<label>تعداد<input id="qty" type="number" min="1" value="1" required></label>
-<label>روش پرداخت<select id="payment" required>
-<option value="">انتخاب کنید</option><option>کارت‌به‌کارت</option><option>پرداخت هنگام تحویل</option>
-</select></label>
-<div id="cardInfo" class="notice hidden">💳 شماره کارت: <b>اینجا شماره کارت خودت را قرار بده</b><br>نام صاحب کارت: <b>نام صاحب کارت</b><br>پس از واریز، رسید را نگه دارید تا سفارش بررسی شود.</div>
-<label>توضیحات<textarea id="note" rows="3" placeholder="مثلاً زمان مناسب برای تحویل"></textarea></label>
-<div class="notice">📍 آدرس محل تحویل عمومی نیست و پس از تأیید سفارش به مشتری اعلام می‌شود.</div>
-<button class="btn primary" type="submit">ثبت سفارش</button>
-</form>
-<div id="result" class="hidden success"></div>
-</div>
+<!-- آمار -->
+<section class="stats">
+
+    <div class="stats-container">
+
+        <div class="stat">
+            <strong>🌆</strong>
+            شهر بیرجند
+        </div>
+
+        <div class="stat">
+            <strong>🏛️</strong>
+            تاریخ و فرهنگ
+        </div>
+
+        <div class="stat">
+            <strong>🌄</strong>
+            طبیعت زیبا
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="admin">
-<div class="box">
-<div class="title"><h2>📋 پنل سفارش‌ها</h2><p>نسخه آزمایشی این صفحه سفارش‌های ذخیره‌شده روی همین مرورگر را نشان می‌دهد.</p></div>
-<div id="orders"></div>
-</div>
+<!-- دیدنی‌ها -->
+<section id="places">
+
+    <div class="title">
+        <h2>جاذبه‌های بیرجند</h2>
+        <p>چند مورد از مکان‌های شناخته‌شده شهر</p>
+    </div>
+
+    <div class="places">
+
+        <div class="place">
+            <h3>🏰 باغ و عمارت اکبریه</h3>
+            <p>
+                باغ و عمارت اکبریه از بناهای تاریخی شناخته‌شده
+                بیرجند و یکی از نمادهای فرهنگی این شهر است.
+            </p>
+        </div>
+
+        <div class="place">
+            <h3>🏛️ ارگ کلاه‌فرنگی</h3>
+            <p>
+                ارگ کلاه‌فرنگی یکی از بناهای تاریخی مهم بیرجند
+                با معماری متفاوت و جذاب است.
+            </p>
+        </div>
+
+        <div class="place">
+            <h3>🌳 باغ‌های بیرجند</h3>
+            <p>
+                باغ‌های تاریخی بیرجند بخش مهمی از هویت معماری
+                و طبیعی منطقه را تشکیل می‌دهند.
+            </p>
+        </div>
+
+        <div class="place">
+            <h3>🕌 بناهای تاریخی</h3>
+            <p>
+                در بیرجند بناهای تاریخی مختلفی وجود دارد که
+                نشان‌دهنده پیشینه فرهنگی این منطقه هستند.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
-<footer>💾 فلش‌مارکت بیرجند © 2026</footer>
+<!-- تماس -->
+<section id="contact">
 
-<script>
-const products=[
-{name:"فلش 32 گیگ",cap:"32GB",price:"قیمت را وارد کنید"},
-{name:"فلش 64 گیگ",cap:"64GB",price:"قیمت را وارد کنید"},
-{name:"فلش 128 گیگ",cap:"128GB",price:"قیمت را وارد کنید"},
-{name:"فلش 256 گیگ",cap:"256GB",price:"قیمت را وارد کنید"}
-];
+    <div class="contact">
 
-const list=document.getElementById("productList"), select=document.getElementById("product");
-products.forEach((p,i)=>{
- list.innerHTML+=`<div class="card"><div class="icon">💾</div><h3>${p.name}</h3><p>${p.cap}</p><div class="price">${p.price}</div><a class="btn" href="#order" onclick="choose(${i})">ثبت سفارش</a></div>`;
- select.innerHTML+=`<option value="${p.name}">${p.name}</option>`;
-});
-function choose(i){select.value=products[i].name}
+        <div class="title">
+            <h2>ارتباط با ما</h2>
 
-document.getElementById("payment").onchange=e=>{
- document.getElementById("cardInfo").classList.toggle("hidden",e.target.value!=="کارت‌به‌کارت")
-};
+            <p>
+                این سایت برای معرفی شهر زیبای بیرجند ساخته شده است.
+            </p>
 
-document.getElementById("orderForm").onsubmit=e=>{
- e.preventDefault();
- const phone=document.getElementById("phone").value.trim();
- if(!/^09\d{9}$/.test(phone)){alert("شماره موبایل را به شکل 09xxxxxxxxx وارد کنید.");return}
- const o={
-  id:"FB-"+Date.now().toString().slice(-8),
-  name:document.getElementById("name").value.trim(),
-  phone,product:select.value,qty:document.getElementById("qty").value,
-  payment:document.getElementById("payment").value,
-  note:document.getElementById("note").value.trim(),
-  date:new Date().toLocaleString("fa-IR"),status:"جدید"
- };
- const a=JSON.parse(localStorage.getItem("flashOrders")||"[]");a.unshift(o);
- localStorage.setItem("flashOrders",JSON.stringify(a));
- document.getElementById("result").classList.remove("hidden");
- document.getElementById("result").innerHTML=`✅ سفارش ثبت شد.<br>شماره سفارش: <b>${o.id}</b><br>روش پرداخت: ${o.payment}<br><small>در نسخه واقعی، سفارش به سرور و سپس روبیکا/ایتا ارسال خواهد شد.</small>`;
- e.target.reset();document.getElementById("cardInfo").classList.add("hidden");render();
- document.getElementById("admin").scrollIntoView({behavior:"smooth"});
-};
+            <br>
 
-function safe(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-function render(){
- const box=document.getElementById("orders"),a=JSON.parse(localStorage.getItem("flashOrders")||"[]");
- if(!a.length){box.innerHTML="<p>هنوز سفارشی ثبت نشده است.</p>";return}
- box.innerHTML=a.map((o,i)=>`<div class="order card">
- <h3>🛒 ${safe(o.id)}</h3><p>👤 ${safe(o.name)}</p><p>📱 ${safe(o.phone)}</p>
- <p>💾 ${safe(o.product)} — تعداد: ${o.qty}</p><p>💳 ${safe(o.payment)}</p>
- <p>📝 ${safe(o.note||"-")}</p><small>🕐 ${safe(o.date)} | وضعیت: ${safe(o.status)}</small><br>
- <button class="btn" onclick="del(${i})">حذف</button></div>`).join("")
-}
-function del(i){if(confirm("سفارش حذف شود؟")){let a=JSON.parse(localStorage.getItem("flashOrders")||"[]");a.splice(i,1);localStorage.setItem("flashOrders",JSON.stringify(a));render()}}
-render();
-</script>
+            <a class="button" href="#home">
+                بازگشت به بالا
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 <span>فلش بیرجند</span> | ساخته شده برای معرفی بیرجند
+    </p>
+
+</footer>
+
 </body>
 </html>
